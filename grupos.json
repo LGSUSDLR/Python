@@ -1,0 +1,166 @@
+[
+    {
+        "id": "1",
+        "nombre": "otro wiskacho",
+        "maestro": {
+            "id": "2",
+            "nombre": "Jesus",
+            "apellido": "Burciaga",
+            "edad": 40,
+            "especialidad": "iOS"
+        },
+        "alumnos": [
+            {
+                "id": 4,
+                "nombre": "aza gay",
+                "apellido": "canela",
+                "edad": "23",
+                "matricula": "91345672",
+                "promedio": "10"
+            },
+            {
+                "id": 2,
+                "nombre": "Jesus",
+                "apellido": "De la rosa",
+                "edad": 19,
+                "matricula": 23170119,
+                "promedio": 9.3
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "nombre": "5a",
+        "maestro": {
+            "id": "4",
+            "nombre": "elmalilla",
+            "apellido": "jimenez",
+            "edad": "19",
+            "especialidad": "Ginecologo"
+        },
+        "alumnos": [
+            {
+                "id": 5,
+                "nombre": "pancho",
+                "apellido": "dominguez",
+                "edad": "18",
+                "matricula": "2345678",
+                "promedio": "10"
+            },
+            {
+                "id": 4,
+                "nombre": "aza gay",
+                "apellido": "canela",
+                "edad": "23",
+                "matricula": "91345672",
+                "promedio": "10"
+            },
+            {
+                "id": 3,
+                "nombre": "elpepe",
+                "apellido": "etesech",
+                "edad": "69",
+                "matricula": "12345678",
+                "promedio": "10"
+            },
+            {
+                "id": 6,
+                "nombre": "juan ",
+                "apellido": "lopez",
+                "edad": "23",
+                "matricula": "1234567",
+                "promedio": "9"
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "nombre": "7B",
+        "maestro": {
+            "id": "5",
+            "nombre": "Juan",
+            "apellido": "Perez",
+            "edad": "54",
+            "especialidad": "IOT"
+        },
+        "alumnos": [
+            {
+                "id": 6,
+                "nombre": "juan ",
+                "apellido": "lopez",
+                "edad": "23",
+                "matricula": "1234567",
+                "promedio": "9"
+            },
+            {
+                "id": 5,
+                "nombre": "pancho",
+                "apellido": "dominguez",
+                "edad": "18",
+                "matricula": "2345678",
+                "promedio": "10"
+            },
+            {
+                "id": 4,
+                "nombre": "aza gay",
+                "apellido": "canela",
+                "edad": "23",
+                "matricula": "91345672",
+                "promedio": "10"
+            },
+            {
+                "id": 3,
+                "nombre": "elpepe",
+                "apellido": "etesech",
+                "edad": "69",
+                "matricula": "12345678",
+                "promedio": "10"
+            },
+            {
+                "id": 2,
+                "nombre": "Jesus",
+                "apellido": "De la rosa",
+                "edad": 19,
+                "matricula": 23170119,
+                "promedio": 9.3
+            },
+            {
+                "id": 1,
+                "nombre": "Alberto",
+                "apellido": "Trejo",
+                "edad": 18,
+                "matricula": 23170093,
+                "promedio": 10
+            },
+            {
+                "id": 7,
+                "nombre": "saul",
+                "apellido": "marica",
+                "edad": "23",
+                "matricula": "2356",
+                "promedio": "7"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "nombre": "ola",
+        "maestro": {
+            "id": 6,
+            "nombre": "ola",
+            "apellido": "ola",
+            "edad": "12",
+            "especialidad": "popo"
+        },
+        "alumnos": [
+            {
+                "id": 13,
+                "nombre": "ola",
+                "apellido": "ola",
+                "edad": "2",
+                "matricula": "2121",
+                "promedio": "2"
+            }
+        ]
+    }
+]
