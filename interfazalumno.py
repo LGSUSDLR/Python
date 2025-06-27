@@ -13,9 +13,8 @@ class InterfazAlumno:
         else:
             self.alumnos = contenedor_alumnos
         
-        # Inicializar sistema de cola y arrancar timer para procesar cola periódicamente
-        self.cola_guardado = ColaGuardado()
-        self.cola_guardado._reiniciar_timer()  # Iniciar procesamiento automático
+        self.cola_guardado = ColaGuardado("alumnos")
+        self.cola_guardado._reiniciar_timer() 
 
     def seleccionarAlumnoNoEnGrupo(self, grupo):
         ids_en_grupo = {str(alumno.id) for alumno in grupo.alumnos.items}
@@ -151,11 +150,9 @@ class InterfazAlumno:
             print("No se pudo eliminar el alumno.")
 
     def guardar(self):
-        """Método principal de guardado con sistema de cola"""
-        # Guardar localmente siempre
         self.alumnos.crearJson("alumnos.json")
         
-        # Intentar guardar directo en MongoDB, sino agregar a cola
+        # Intentar guardar directo en MongoDB, sino agregar a cola de alumnos
         if self.cola_guardado.intentar_conexion():
             try:
                 repo = MongoRepositorio()
@@ -163,14 +160,14 @@ class InterfazAlumno:
                 repo.guardar_todos("alumnos", datos)
                 print(f"Guardado directo en MongoDB: {len(datos)} alumnos")
             except Exception as e:
-                print(f"Error al guardar en MongoDB: {e}")
+                print(f"Error al guardar alumnos en MongoDB: {e}")
                 datos = [a.convADiccionario() for a in self.alumnos.items]
                 self.cola_guardado.agregar_a_cola("alumnos", datos)
-                print("Agregado a cola de guardado")
+                print("Alumnos agregados a cola de guardado específica")
         else:
             datos = [a.convADiccionario() for a in self.alumnos.items]
             self.cola_guardado.agregar_a_cola("alumnos", datos)
-            print("Sin conexión MongoDB. Agregado a cola de guardado")
+            print("Sin conexión MongoDB. Alumnos agregados a cola de guardado específica")
 
     def menu_interactivo(self):
         while True:
@@ -179,11 +176,9 @@ class InterfazAlumno:
             print("2. Mostrar alumnos")
             print("3. Actualizar alumno")
             print("4. Eliminar alumno")
-            print("5. Procesar cola pendiente (forzar sincronización)")
-            print("6. Salir")
+            print("5. Salir")
 
-            if self.cola_guardado.tiene_elementos_pendientes():
-                print("⚠️  Hay elementos pendientes de sincronizar con MongoDB")
+
 
             opcion = input("Ingrese una opción: ").strip()
 
@@ -196,9 +191,6 @@ class InterfazAlumno:
             elif opcion == "4":
                 self.eliminarAlumno()
             elif opcion == "5":
-                print("Procesando cola pendiente...")
-                self.cola_guardado.procesar_cola()
-            elif opcion == "6":
                 print("Saliendo...")
                 break
             else:

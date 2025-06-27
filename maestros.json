@@ -40,5 +40,26 @@
         "apellido": "p",
         "edad": "12",
         "especialidad": "p"
+    },
+    {
+        "id": 8,
+        "nombre": "Iker",
+        "apellido": "Flowers",
+        "edad": "67",
+        "especialidad": "Bola"
+    },
+    {
+        "id": 9,
+        "nombre": "Danielon",
+        "apellido": "De Madrid",
+        "edad": "18",
+        "especialidad": "Futbol"
+    },
+    {
+        "id": 10,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "20",
+        "especialidad": "ola"
     }
 ]

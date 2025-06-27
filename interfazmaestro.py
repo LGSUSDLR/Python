@@ -13,13 +13,14 @@ class InterfazMaestro:
         else:
             self.maestros = contenedor_maestros
 
-        self.cola_guardado = ColaGuardado()
+        # Inicializar sistema de cola específico para maestros
+        self.cola_guardado = ColaGuardado("maestros")
+        self.cola_guardado._reiniciar_timer()  # Iniciar procesamiento automático
 
     def obtener_id(self):
         if not self.maestros.items:
             return 1
         return max(int(maestro.id) for maestro in self.maestros.items) + 1
-
 
     def crearMaestro(self):
         nombre = input("Ingrese el nombre del maestro: ")
@@ -89,7 +90,7 @@ class InterfazMaestro:
             print("No se pudo eliminar el maestro.")
 
     def guardar(self):
-        """Método principal de guardado con sistema de cola"""
+        """Método principal de guardado con sistema de cola específico para maestros"""
         # Guardar localmente en JSON
         self.maestros.crearJson("maestros.json")
         datos = self.maestros.lista_diccionarios()
@@ -100,12 +101,13 @@ class InterfazMaestro:
                 repo.guardar_todos("maestros", datos)
                 print(f"Guardado directo en MongoDB: {len(datos)} maestros")
             except Exception as e:
-                print(f"Error al guardar en MongoDB: {e}")
+                print(f"Error al guardar maestros en MongoDB: {e}")
                 self.cola_guardado.agregar_a_cola("maestros", datos)
-                print("Agregado a cola de guardado")
+                print("Maestros agregados a cola de guardado específica")
         else:
             self.cola_guardado.agregar_a_cola("maestros", datos)
-            print("Sin conexión MongoDB. Agregado a cola de guardado")
+            print("Sin conexión MongoDB. Maestros agregados a cola de guardado específica")
+
 
     def menu_interactivo(self):
         while True:
@@ -114,10 +116,10 @@ class InterfazMaestro:
             print("2. Mostrar maestros")
             print("3. Actualizar maestro")
             print("4. Eliminar maestro")
-            print("5. Salir")
+            print("5. Procesar cola pendiente (forzar sincronización)")
+            print("6. Ver estado de cola")
+            print("7. Salir")
 
-            if self.cola_guardado.tiene_elementos_pendientes():
-                print("⚠️  Hay elementos pendientes de sincronizar con MongoDB")
 
             opcion = input("Ingrese una opción: ").strip()
 
@@ -133,7 +135,6 @@ class InterfazMaestro:
                 break
             else:
                 print("Opción no válida")
-
 
 if __name__ == "__main__":
     interfaz = InterfazMaestro()

@@ -162,5 +162,26 @@
                 "promedio": "2"
             }
         ]
+    },
+    {
+        "id": "5",
+        "nombre": "Otro pedo",
+        "maestro": {
+            "id": "2",
+            "nombre": "Jesus",
+            "apellido": "Burciaga",
+            "edad": 40,
+            "especialidad": "iOS"
+        },
+        "alumnos": [
+            {
+                "id": 17,
+                "nombre": "alex",
+                "apellido": "espinoza",
+                "edad": "19",
+                "matricula": "567383",
+                "promedio": "6"
+            }
+        ]
     }
 ]

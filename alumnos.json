@@ -126,5 +126,29 @@
         "edad": "18",
         "matricula": "567891",
         "promedio": "10"
+    },
+    {
+        "id": 17,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "18",
+        "matricula": "672890",
+        "promedio": "10"
+    },
+    {
+        "id": 18,
+        "nombre": "oa",
+        "apellido": "o",
+        "edad": "19",
+        "matricula": "7218",
+        "promedio": "1"
+    },
+    {
+        "id": 19,
+        "nombre": "ola",
+        "apellido": "",
+        "edad": "10",
+        "matricula": "10928",
+        "promedio": "2"
     }
 ]

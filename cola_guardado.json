@@ -1,1 +1,379 @@
-[]
+[
+  {
+    "coleccion": "alumnos",
+    "datos": [
+      {
+        "id": 1,
+        "nombre": "Alberto",
+        "apellido": "Trejo",
+        "edad": 18,
+        "matricula": 23170093,
+        "promedio": 10
+      },
+      {
+        "id": 2,
+        "nombre": "Jesus",
+        "apellido": "De la rosa",
+        "edad": 19,
+        "matricula": 23170119,
+        "promedio": 9.3
+      },
+      {
+        "id": 3,
+        "nombre": "Cuchifli",
+        "apellido": "Hdz",
+        "edad": "43",
+        "matricula": "3456789",
+        "promedio": "8"
+      },
+      {
+        "id": 4,
+        "nombre": "Mitch",
+        "apellido": "Sorrenstein",
+        "edad": "20",
+        "matricula": "456723",
+        "promedio": "10"
+      },
+      {
+        "id": 5,
+        "nombre": "Pedro",
+        "apellido": "hdz",
+        "edad": "12",
+        "matricula": "456789",
+        "promedio": "6"
+      },
+      {
+        "id": 6,
+        "nombre": "Pepe",
+        "apellido": "Chavez",
+        "edad": "26",
+        "matricula": "4567283",
+        "promedio": "7"
+      },
+      {
+        "id": 7,
+        "nombre": "chuy",
+        "apellido": "dmz",
+        "edad": "56",
+        "matricula": "2324234",
+        "promedio": "8"
+      },
+      {
+        "id": 8,
+        "nombre": "elchavo",
+        "apellido": "del 8",
+        "edad": "8",
+        "matricula": "1233143",
+        "promedio": "7"
+      },
+      {
+        "id": 9,
+        "nombre": "tung tung tung sahur",
+        "apellido": "perez",
+        "edad": "6",
+        "matricula": "62178349",
+        "promedio": "10"
+      },
+      {
+        "id": 10,
+        "nombre": "Fucho",
+        "apellido": "yuais",
+        "edad": "67",
+        "matricula": "9",
+        "promedio": "10"
+      },
+      {
+        "id": 11,
+        "nombre": "pipi",
+        "apellido": "popo",
+        "edad": "6",
+        "matricula": "6789",
+        "promedio": "8"
+      },
+      {
+        "id": 12,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "789",
+        "matricula": "678",
+        "promedio": "7"
+      },
+      {
+        "id": 13,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "2",
+        "matricula": "2121",
+        "promedio": "2"
+      },
+      {
+        "id": 14,
+        "nombre": "p",
+        "apellido": "p",
+        "edad": "1",
+        "matricula": "12213",
+        "promedio": "1"
+      },
+      {
+        "id": 15,
+        "nombre": "Sebas",
+        "apellido": "Purrump",
+        "edad": "20",
+        "matricula": "97289",
+        "promedio": "10"
+      },
+      {
+        "id": 16,
+        "nombre": "deivid",
+        "apellido": "mota",
+        "edad": "18",
+        "matricula": "567891",
+        "promedio": "10"
+      },
+      {
+        "id": 17,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "18",
+        "matricula": "672890",
+        "promedio": "10"
+      },
+      {
+        "id": 18,
+        "nombre": "oa",
+        "apellido": "o",
+        "edad": "19",
+        "matricula": "7218",
+        "promedio": "1"
+      }
+    ],
+    "timestamp": "2025-06-23T14:28:04.733643"
+  },
+  {
+    "coleccion": "maestros",
+    "datos": [
+      {
+        "id": "2",
+        "nombre": "Jesus",
+        "apellido": "Burciaga",
+        "edad": 40,
+        "especialidad": "iOS"
+      },
+      {
+        "id": "3",
+        "nombre": "Saul Sanchez",
+        "apellido": "Lopez",
+        "edad": "35",
+        "especialidad": "Nada"
+      },
+      {
+        "id": "4",
+        "nombre": "elmalilla",
+        "apellido": "jimenez",
+        "edad": "19",
+        "especialidad": "Ginecologo"
+      },
+      {
+        "id": "5",
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "edad": "54",
+        "especialidad": "IOT"
+      },
+      {
+        "id": 6,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "12",
+        "especialidad": "popo"
+      },
+      {
+        "id": 7,
+        "nombre": "p",
+        "apellido": "p",
+        "edad": "12",
+        "especialidad": "p"
+      },
+      {
+        "id": 8,
+        "nombre": "Iker",
+        "apellido": "Flowers",
+        "edad": "67",
+        "especialidad": "Bola"
+      },
+      {
+        "id": 9,
+        "nombre": "Danielon",
+        "apellido": "De Madrid",
+        "edad": "18",
+        "especialidad": "Futbol"
+      },
+      {
+        "id": 10,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "20",
+        "especialidad": "ola"
+      }
+    ],
+    "timestamp": "2025-06-23T14:28:59.149599"
+  },
+  {
+    "coleccion": "alumnos",
+    "datos": [
+      {
+        "id": 1,
+        "nombre": "Alberto",
+        "apellido": "Trejo",
+        "edad": 18,
+        "matricula": 23170093,
+        "promedio": 10
+      },
+      {
+        "id": 2,
+        "nombre": "Jesus",
+        "apellido": "De la rosa",
+        "edad": 19,
+        "matricula": 23170119,
+        "promedio": 9.3
+      },
+      {
+        "id": 3,
+        "nombre": "Cuchifli",
+        "apellido": "Hdz",
+        "edad": "43",
+        "matricula": "3456789",
+        "promedio": "8"
+      },
+      {
+        "id": 4,
+        "nombre": "Mitch",
+        "apellido": "Sorrenstein",
+        "edad": "20",
+        "matricula": "456723",
+        "promedio": "10"
+      },
+      {
+        "id": 5,
+        "nombre": "Pedro",
+        "apellido": "hdz",
+        "edad": "12",
+        "matricula": "456789",
+        "promedio": "6"
+      },
+      {
+        "id": 6,
+        "nombre": "Pepe",
+        "apellido": "Chavez",
+        "edad": "26",
+        "matricula": "4567283",
+        "promedio": "7"
+      },
+      {
+        "id": 7,
+        "nombre": "chuy",
+        "apellido": "dmz",
+        "edad": "56",
+        "matricula": "2324234",
+        "promedio": "8"
+      },
+      {
+        "id": 8,
+        "nombre": "elchavo",
+        "apellido": "del 8",
+        "edad": "8",
+        "matricula": "1233143",
+        "promedio": "7"
+      },
+      {
+        "id": 9,
+        "nombre": "tung tung tung sahur",
+        "apellido": "perez",
+        "edad": "6",
+        "matricula": "62178349",
+        "promedio": "10"
+      },
+      {
+        "id": 10,
+        "nombre": "Fucho",
+        "apellido": "yuais",
+        "edad": "67",
+        "matricula": "9",
+        "promedio": "10"
+      },
+      {
+        "id": 11,
+        "nombre": "pipi",
+        "apellido": "popo",
+        "edad": "6",
+        "matricula": "6789",
+        "promedio": "8"
+      },
+      {
+        "id": 12,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "789",
+        "matricula": "678",
+        "promedio": "7"
+      },
+      {
+        "id": 13,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "2",
+        "matricula": "2121",
+        "promedio": "2"
+      },
+      {
+        "id": 14,
+        "nombre": "p",
+        "apellido": "p",
+        "edad": "1",
+        "matricula": "12213",
+        "promedio": "1"
+      },
+      {
+        "id": 15,
+        "nombre": "Sebas",
+        "apellido": "Purrump",
+        "edad": "20",
+        "matricula": "97289",
+        "promedio": "10"
+      },
+      {
+        "id": 16,
+        "nombre": "deivid",
+        "apellido": "mota",
+        "edad": "18",
+        "matricula": "567891",
+        "promedio": "10"
+      },
+      {
+        "id": 17,
+        "nombre": "ola",
+        "apellido": "ola",
+        "edad": "18",
+        "matricula": "672890",
+        "promedio": "10"
+      },
+      {
+        "id": 18,
+        "nombre": "oa",
+        "apellido": "o",
+        "edad": "19",
+        "matricula": "7218",
+        "promedio": "1"
+      },
+      {
+        "id": 19,
+        "nombre": "ola",
+        "apellido": "",
+        "edad": "10",
+        "matricula": "10928",
+        "promedio": "2"
+      }
+    ],
+    "timestamp": "2025-06-23T14:48:05.661459"
+  }
+]

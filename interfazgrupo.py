@@ -35,8 +35,9 @@ class InterfazGrupo:
         except FileNotFoundError:
             pass
 
-        # Inicializar sistema de cola para guardado diferido
-        self.cola_guardado = ColaGuardado()
+        # Inicializar sistema de cola específico para grupos
+        self.cola_guardado = ColaGuardado("grupos")
+        self.cola_guardado._reiniciar_timer()  # Iniciar procesamiento automático
 
     def obtener_id(self):
         if not self.grupos.items:
@@ -119,23 +120,26 @@ class InterfazGrupo:
             print("No se pudo eliminar el grupo.")
 
     def guardar_datos(self):
-        """Guarda localmente y sincroniza con MongoDB usando cola de guardado."""
+        """Guarda localmente y sincroniza con MongoDB usando cola de guardado específica para grupos."""
         self.grupos.crearJson("grupos.json")
 
         if self.cola_guardado.intentar_conexion():
             try:
                 self.grupos.guardar_en_mongodb()
                 print(f"Guardado directo en MongoDB: {len(self.grupos.items)} grupos")
-                # No se llama a limpiar_cola porque no existe en ColaGuardado
             except Exception as e:
-                print(f"Error al guardar en MongoDB: {e}")
+                print(f"Error al guardar grupos en MongoDB: {e}")
                 datos = [grupo.convADiccionario() for grupo in self.grupos.items]
                 self.cola_guardado.agregar_a_cola("grupos", datos)
-                print("Agregado a cola de guardado")
+                print("Grupos agregados a cola de guardado específica")
         else:
             datos = [grupo.convADiccionario() for grupo in self.grupos.items]
             self.cola_guardado.agregar_a_cola("grupos", datos)
-            print("Sin conexión MongoDB. Agregado a cola de guardado")
+            print("Sin conexión MongoDB. Grupos agregados a cola de guardado específica")
+
+    def mostrar_estado_cola(self):
+        """Muestra el estado actual de la cola de grupos"""
+        print("\n" + self.cola_guardado.obtener_info_cola())
 
     def menu_interactivo(self):
         while True:
@@ -145,9 +149,6 @@ class InterfazGrupo:
             print("3. Agregar alumno a grupo")
             print("4. Eliminar grupo")
             print("5. Salir")
-
-            if self.cola_guardado.tiene_elementos_pendientes():
-                print("⚠️  Hay elementos pendientes de sincronizar con MongoDB")
 
             opcion = input("Ingrese una opción: ")
 
@@ -163,7 +164,6 @@ class InterfazGrupo:
                 break
             else:
                 print("Opción no válida")
-
 
 if __name__ == "__main__":
     interfaz = InterfazGrupo()
